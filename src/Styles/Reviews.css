@@ -1,0 +1,105 @@
+.review-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fff0f5, #ffe6e6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  gap: 2rem;
+}
+
+.rw-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e63946;
+  text-align: center;
+}
+
+.rw-card {
+  background: #fff;
+  border-radius: 25px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.rw-emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.rw-message {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.rw-product {
+  font-size: 1rem;
+  color: #e63946;
+  margin-bottom: 1.5rem;
+}
+
+.rw-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rw-user {
+  text-align: left;
+}
+
+.rw-name {
+  font-weight: 600;
+  color: #222;
+}
+
+.rw-location {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.rw-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rw-btn {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rw-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(230,57,70,0.5);
+}
+
+@media (max-width: 768px) {
+  .rw-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

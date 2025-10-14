@@ -1,0 +1,87 @@
+/* Fondo general */
+.legal-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fbff, #eef4ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #1e293b;
+  padding: 2rem 1rem;
+}
+
+/* Encabezado */
+.legal-header {
+  margin-bottom: 1.5rem;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.brand-highlight {
+  color: #3b82f6;
+}
+
+/* Contenedor principal */
+.legal-container {
+  background: #ffffff;
+  max-width: 850px;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  line-height: 1.7;
+}
+
+/* Título de página */
+.page-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+/* Secciones individuales */
+.legal-section {
+  margin-bottom: 1.8rem;
+}
+
+.legal-title {
+  font-size: 1.2rem;
+  color: #334155;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+
+.legal-title::before {
+  content: "◆";
+  color: #3b82f6;
+  margin-right: 8px;
+}
+
+.legal-description {
+  color: #475569;
+  font-size: 0.97rem;
+  text-align: justify;
+}
+
+/* Footer */
+.legal-footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #64748b;
+  text-align: center;
+}

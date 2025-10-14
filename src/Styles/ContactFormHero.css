@@ -1,0 +1,116 @@
+.contact-hero-section {
+  height: 100vh;
+  background: url('../Assets/fondo_lr.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   font-family: 'Poppins', sans-serif;
+
+}
+
+.contact-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.contact-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.contact-content h2 {
+  color: #e63946;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  color: #222;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-form .form-group {
+  position: relative;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-icon {
+  position: absolute;
+  left: 360px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e63946;
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.3);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-submit-btn {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.5);
+}
+
+.error-message {
+  color: #e63946;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.success-message {
+  color: green;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 1rem;
+  color: #fff;
+}
