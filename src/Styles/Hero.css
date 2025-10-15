@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
-    background: linear-gradient(to right, #FFF4E6, #FFE6B3); /* colores cálidos y asiáticos */
+    background: linear-gradient(to right, #FFFBEA, #FFECA8); /* amarillo cálido */
 }
 
 /* Text section */
@@ -15,7 +15,7 @@
 }
 .text-headline {
     margin-bottom: 12px;
-    color: #D43F3A; /* rojo Super Asia */
+    color: #E53935; /* rojo vibrante */
     font-family: 'Rubik', sans-serif;
     font-size: 22px;
     font-weight: bold;
@@ -23,7 +23,7 @@
 }
 .text-title {
     width: 500px;
-    color: #B22222; /* rojo oscuro */
+    color: #B71C1C; /* rojo oscuro */
     font-family: 'Poppins', sans-serif;
     font-size: 42px;
     font-weight: bold;
@@ -43,7 +43,7 @@
     border: 1px solid transparent;
     border-radius: 28px;
     outline: transparent;
-    background-color: #D43F3A; /* rojo Super Asia */
+    background-color: #E53935; /* rojo vibrante */
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
     letter-spacing: .8px;
@@ -51,9 +51,9 @@
     transition: all .4s ease;
 }
 .text-appointment-btn:hover {
-    color: #D43F3A;
+    color: #E53935;
     background-color: transparent;
-    border: 1px solid #D43F3A;
+    border: 1px solid #E53935;
 }
 .text-stats {
     margin-top: 40px;
@@ -73,7 +73,7 @@
 }
 .text-stats-container p:first-child {
     margin-bottom: 8px;
-    color: #FF6F61; /* naranja vibrante */
+    color: #FFB300; /* amarillo vibrante */
     font-family: 'Rubik', sans-serif;
     font-size: 32px;
     font-weight: bold;
@@ -88,7 +88,6 @@
 .hero-image1 {
     width: 100%;
     height: auto;
-   
 }
 
 /* Scroll Btn */
@@ -102,7 +101,7 @@
     color: white;
     border: 3px solid white;
     border-radius: 50%;
-    background-color: #D43F3A;
+    background-color: #E53935;
     position: fixed;
     bottom: 50px;
     right: 50px;

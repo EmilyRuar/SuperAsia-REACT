@@ -1,127 +1,123 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCommentDots,
-  faBars,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
+import { Link, useNavigate } from "react-router-dom";
 import "../Styles/Navbar.css";
-import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 
 function Navbar() {
-  const [nav, setNav] = useState(false);
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const openNav = () => {
-    setNav(!nav);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
-  const handleChatBtnClick = () => {
-    if (!isButtonDisabled) {
-      toast.info("Estamos experimentando un alto volumen de tráfico. Por favor, espera un momento.", {
-        position: toast.POSITION.TOP_CENTER,
-        onOpen: () => setIsButtonDisabled(true),
-        onClose: () => setIsButtonDisabled(false),
-      });
+  // 🔽 Función para hacer scroll suave a secciones del home
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <div className="navbar-section">
+    <header className="navbar-section">
+      {/* Logo */}
       <h1 className="navbar-title">
-        <Link to="/">
-          Super Asia<span className="navbar-sign"></span>
+        <Link to="/" onClick={() => scrollToSection("home")}>
+          Super Asia
         </Link>
       </h1>
 
-      {/* Desktop */}
-      <ul className="navbar-items">
-        <li>
-          <Link to="/" className="navbar-links">
-            Home
+      {/* Ícono hamburguesa (solo en móviles) */}
+      <div className="menu-toggle" onClick={toggleMenu}>
+        {isOpen ? "✖" : "☰"}
+      </div>
+
+      {/* Menú */}
+      <ul className={`navbar-items ${isOpen ? "open" : ""}`}>
+        <li className="nav-item">
+          <Link
+            onClick={() => {
+              closeMenu();
+              scrollToSection("home");
+            }}
+            className="nav-link"
+            to="/"
+          >
+            Inicio
           </Link>
         </li>
-        <li>
-          <a href="#services" className="navbar-links">
-            Servicios
-          </a>
+
+        <li className="nav-item">
+          <span
+            onClick={() => {
+              closeMenu();
+              navigate("/Productos");
+            }}
+            className="nav-link link-button"
+          >
+            Productos
+          </span>
         </li>
-        <li>
-          <a href="#about" className="navbar-links">
+
+        <li className="nav-item">
+          <span
+            onClick={() => {
+              closeMenu();
+              navigate("/Ofertas");
+            }}
+            className="nav-link link-button"
+          >
+            Ofertas
+          </span>
+        </li>
+
+        <li className="nav-item">
+          <span
+            onClick={() => {
+              closeMenu();
+              scrollToSection("nosotros");
+            }}
+            className="nav-link link-button"
+          >
             Nosotros
-          </a>
+          </span>
         </li>
-        <li>
-          <a href="#reviews" className="navbar-links">
-            Reviews
-          </a>
+
+        <li className="nav-item">
+          <span
+            onClick={() => {
+              closeMenu();
+              scrollToSection("contacto");
+            }}
+            className="nav-link link-button"
+          >
+            Contacto
+          </span>
         </li>
-        <li>
-          <a href="#doctors" className="navbar-links">
-            Profesionales
-          </a>
+
+        {/* Botones sesión */}
+        <li className="nav-item">
+          <Link onClick={closeMenu} to="/login">
+            <button type="button" className="btn btn-primary btn-sm">
+              Iniciar Sesión
+            </button>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link onClick={closeMenu} to="/registro">
+            <button type="button" className="btn btn-secondary btn-sm">
+              Crear Cuenta
+            </button>
+          </Link>
+        </li>
+
+        {/* Carrito */}
+        <li className="nav-item">
+          <Link onClick={closeMenu} to="/carrito" className="nav-link emoji-cart">
+            🛒
+          </Link>
         </li>
       </ul>
-
-      <button
-        className="navbar-btn"
-        type="button"
-        disabled={isButtonDisabled}
-        onClick={handleChatBtnClick}
-      >
-        <FontAwesomeIcon icon={faCommentDots} /> Chat en Vivo
-      </button>
-
-      {/* Mobile */}
-      <div className={`mobile-navbar ${nav ? "open-nav" : ""}`}>
-        <div onClick={openNav} className="mobile-navbar-close">
-          <FontAwesomeIcon icon={faXmark} className="hamb-icon" />
-        </div>
-
-        <ul className="mobile-navbar-links">
-          <li>
-            <Link onClick={openNav} to="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <a onClick={openNav} href="#services">
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a onClick={openNav} href="#about">
-              Nosotros
-            </a>
-          </li>
-          <li>
-            <a onClick={openNav} href="#reviews">
-              Reviews
-            </a>
-          </li>
-          <li>
-            <a onClick={openNav} href="#doctors">
-              Profesionales
-            </a>
-          </li>
-          <li>
-            <a onClick={openNav} href="#contact">
-              Contacto
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      {/* Hamburger Icon */}
-      <div className="mobile-nav">
-        <FontAwesomeIcon
-          icon={faBars}
-          onClick={openNav}
-          className="hamb-icon"
-        />
-      </div>
-    </div>
+    </header>
   );
 }
 

@@ -1,0 +1,80 @@
+.productos-section {
+  padding: 100px 20px 50px 20px; /* padding-top grande para que no tape el navbar */
+  font-family: 'Poppins', sans-serif;
+}
+
+.productos-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.producto-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.badge-descuento {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #c62828; /* rojo Super Asia */
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+
+.producto-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.producto-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.producto-precio {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 5px;
+}
+
+.precio-descuento {
+  color: #c62828;
+  font-weight: bold;
+}
+
+.btn-agregar {
+  background-color: #c62828;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #a81e23;
+}

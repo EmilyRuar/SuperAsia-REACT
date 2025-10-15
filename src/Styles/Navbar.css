@@ -1,126 +1,137 @@
+/* === Navbar general === */
 .navbar-section {
-    padding: 0 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    background-color: white;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 12px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
 }
+
+/* === Logo === */
 .navbar-title a {
-    color: #1A8EFD;
-    letter-spacing: .6px;
-    text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #c62828;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
-.navbar-title {
-    font-family: 'Poppins', sans-serif;
+
+.navbar-title a:hover {
+  color: #b71c1c;
 }
-.navbar-sign {
-    color: #ff0b0b;
-    font-family: Cambria, sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-}
+
+/* === Menú Desktop === */
 .navbar-items {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    font-family: 'Rubik', sans-serif;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
 }
-.navbar-items > li {
-    list-style-type: none;
+
+.navbar-items .nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
-.navbar-links {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    letter-spacing: .8px;
+
+.navbar-items .nav-link:hover {
+  color: #c62828;
+  border-bottom: 2px solid #ffb300;
 }
-.navbar-links:hover {
-    color: #0cc2ea;
+
+/* === Botones === */
+.navbar-items button {
+  cursor: pointer;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
-.navbar-btn {
-    padding: 14px 20px;
-    color: white;
-    border: 1px solid transparent;
-    border-radius: 28px;
-    outline: transparent;
-    background-color: #fd1a1a;
-    font-size: 18px;
-    font-family: 'Rubik', sans-serif;
-    letter-spacing: .8px;
-    cursor: pointer;
-    transition: all .4s ease;
+
+/* Botón rojo (sesión) */
+.btn-primary {
+  background-color: #c62828;
+  color: white;
 }
-.navbar-btn:hover {
-    color: #fd1a1a;
-    background-color: white;
-    border: 1px solid #fd1a1a;
+
+.btn-primary:hover {
+  background-color: #b71c1c;
 }
-/* Hamburger Icon */
-.mobile-nav {
+
+/* Botón dorado (registro) */
+.btn-secondary {
+  background-color: #ffb300;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #f9a825;
+}
+
+/* === Carrito === */
+.emoji-cart {
+  font-size: 1.5rem;
+  color: #c62828;
+  transition: transform 0.2s ease;
+}
+
+.emoji-cart:hover {
+  transform: scale(1.1);
+}
+
+/* === Icono hamburguesa === */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #c62828;
+}
+
+/* ===============================
+   RESPONSIVE
+================================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-items {
     display: none;
-}
-.hamb-icon {
-    width: 26px;
-    height: 26px;
-    cursor: pointer;
-}
-.hamb-icon:hover {
-    color: #0cc2ea;
-}
-/* Mobile Navbar */
-.mobile-navbar {
-    display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    background-color: white;
-    z-index: 20;
-    justify-content: center;
-    align-items: center;
-    transition: left .5s ease-in-out;
-}
-.mobile-navbar-close {
     position: absolute;
-    top: 28px;
-    right: 28px;
-}
-.mobile-navbar-close .hamb-icon:hover {
-    color: rgb(255, 22, 22);
-}
-.open-nav {
-    left: 0;
-}
-.mobile-navbar-links {
-    list-style-type: none;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .navbar-items.open {
     display: flex;
-    flex-direction: column;
-    font-size: 24px;
-    gap: 24px;
-    text-align: center;
-}
-.mobile-navbar-links li a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    letter-spacing: .8px;
-    transition: color .3s ease-in-out;
-}
-.mobile-navbar-links li a:hover {
-    color: #0cc2ea;
-}
-/* Responsive */
-@media screen and (max-width: 900px) {
-    .navbar-btn, .navbar-items {
-        display: none;
-    }
-    .mobile-nav {
-        display: block;
-    }
+  }
+
+  .navbar-items .nav-item {
+    width: 100%;
+    text-align: center; 
+  }
+
+  .navbar-items .nav-link {
+    font-size: 1.1rem;
+  }
 }

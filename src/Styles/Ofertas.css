@@ -1,0 +1,127 @@
+/* Estructura general */
+.productos-section,
+.ofertas-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.productos-title,
+.ofertas-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff; /* Azul Super Asia */
+  margin-bottom: 20px;
+}
+
+/* Filtros de productos */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filtros select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Grid de productos / ofertas */
+.productos-grid,
+.ofertas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+/* Tarjeta de producto */
+.producto-card,
+.oferta-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.producto-card:hover,
+.oferta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Imagen */
+.producto-img,
+.oferta-img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Nombre y precio */
+.producto-card h3,
+.oferta-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.producto-card p,
+.oferta-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.precio-actual {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.descuento {
+  background-color: #ff3b3b;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+/* Botones */
+.btn-agregar,
+.btn-comprar {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover,
+.btn-comprar:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .productos-grid,
+  .ofertas-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .filtros {
+    flex-direction: column;
+    align-items: center;
+  }
