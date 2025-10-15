@@ -94,22 +94,7 @@ function Navbar() {
           </span>
         </li>
 
-        {/* Botones sesión */}
-        <li className="nav-item">
-          <Link onClick={closeMenu} to="/login">
-            <button type="button" className="btn btn-primary btn-sm">
-              Iniciar Sesión
-            </button>
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link onClick={closeMenu} to="/registro">
-            <button type="button" className="btn btn-secondary btn-sm">
-              Crear Cuenta
-            </button>
-          </Link>
-        </li>
-
+    
         {/* Carrito */}
         <li className="nav-item">
           <Link onClick={closeMenu} to="/carrito" className="nav-link emoji-cart">
