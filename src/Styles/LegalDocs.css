@@ -1,12 +1,12 @@
 /* Fondo general */
 .legal-wrapper {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f9fbff, #eef4ff);
+  background: linear-gradient(135deg, #fff5f5, #ffe9e0);
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Poppins", sans-serif;
-  color: #1e293b;
+  color: #2e2e2e;
   padding: 2rem 1rem;
 }
 
@@ -17,13 +17,14 @@
 
 .brand-link {
   text-decoration: none;
-  color: #1e293b;
-  font-weight: 700;
-  font-size: 2rem;
+  color: #b71c1c; /* Rojo principal Super Asia */
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
 }
 
 .brand-highlight {
-  color: #3b82f6;
+  color: #f5a623; /* Dorado */
 }
 
 /* Contenedor principal */
@@ -31,25 +32,27 @@
   background: #ffffff;
   max-width: 850px;
   width: 100%;
-  padding: 2rem 2.5rem;
+  padding: 2.2rem 2.5rem;
   border-radius: 1.2rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(183, 28, 28, 0.1);
   line-height: 1.7;
+  border: 1px solid rgba(245, 166, 35, 0.2);
 }
 
 /* Título de página */
 .page-heading {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 700;
-  color: #1e40af;
+  color: #b71c1c;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .page-subtitle {
   text-align: center;
   font-size: 1rem;
-  color: #64748b;
+  color: #5c5c5c;
   margin-bottom: 2rem;
 }
 
@@ -60,28 +63,36 @@
 
 .legal-title {
   font-size: 1.2rem;
-  color: #334155;
-  font-weight: 600;
+  color: #b71c1c;
+  font-weight: 700;
   margin-bottom: 0.4rem;
   position: relative;
 }
 
 .legal-title::before {
   content: "◆";
-  color: #3b82f6;
+  color: #f5a623; /* Dorado */
   margin-right: 8px;
 }
 
 .legal-description {
-  color: #475569;
+  color: #444;
   font-size: 0.97rem;
   text-align: justify;
+  line-height: 1.75;
 }
 
 /* Footer */
 .legal-footer {
   margin-top: 2rem;
   font-size: 0.9rem;
-  color: #64748b;
+  color: #5c5c5c;
   text-align: center;
+  border-top: 1px solid rgba(245, 166, 35, 0.3);
+  padding-top: 1.2rem;
+}
+
+.legal-footer .brand-highlight {
+  color: #b71c1c;
+  font-weight: 700;
 }

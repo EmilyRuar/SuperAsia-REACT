@@ -12,7 +12,7 @@ function LegalDocs() {
       <header className="legal-header">
         <h1 className="brand-title">
           <Link to="/" className="brand-link">
-            Cuid<span className="brand-highlight">App</span>
+            Super<span className="brand-highlight">Asia</span>
           </Link>
         </h1>
       </header>
@@ -21,61 +21,62 @@ function LegalDocs() {
         <h2 className="page-heading">📘 Documentos Legales</h2>
         <p className="page-subtitle">
           Conoce nuestras políticas, términos y condiciones para garantizar una experiencia
-          segura y transparente.
+          de compra segura, clara y transparente.
         </p>
 
         <section className="legal-section">
           <h3 className="legal-title">Información General</h3>
           <p className="legal-description">
-            Bienvenido a <strong>CuidApp</strong>, tu plataforma confiable de cuidado domiciliario
-            y consultas médicas online en Santiago de Chile. Nuestra misión es brindar servicios
-            de salud accesibles, personalizados y seguros. Al usar nuestra plataforma, aceptas
-            los términos establecidos en nuestra Política de Privacidad y Términos de Servicio.
+            Bienvenido a <strong>Super Asia</strong>, tu supermercado online de confianza en Chile.
+            Nos dedicamos a ofrecer productos de calidad, promociones exclusivas y un servicio
+            cercano a nuestros clientes. Al usar nuestra plataforma, aceptas los términos establecidos
+            en nuestras Políticas de Privacidad y Términos de Servicio.
           </p>
         </section>
 
         <section className="legal-section">
           <h3 className="legal-title">Política de Privacidad</h3>
           <p className="legal-description">
-            Valoramos tu privacidad. Nuestra Política de Privacidad explica cómo recopilamos,
-            usamos y protegemos tu información personal y médica. Garantizamos manejo seguro
-            de datos, confidencialidad total y transparencia sobre el uso de tu información.
+            En <strong>Super Asia</strong> valoramos tu privacidad y seguridad. Nuestra Política de
+            Privacidad explica cómo recopilamos, usamos y protegemos tus datos personales al realizar
+            compras en nuestro sitio. Garantizamos un manejo seguro de la información, confidencialidad
+            y transparencia total en nuestros procesos.
           </p>
         </section>
 
         <section className="legal-section">
           <h3 className="legal-title">Términos de Servicio</h3>
           <p className="legal-description">
-            Al utilizar <strong>CuidApp</strong>, aceptas nuestros Términos de Servicio. Esto incluye
-            pautas para usar la plataforma, la relación con nuestras cuidadoras y profesionales
-            de la salud, y las responsabilidades de ambas partes. Es importante conocer estos
-            términos para asegurar una experiencia fluida y segura.
+            Al utilizar <strong>Super Asia</strong>, aceptas nuestros Términos de Servicio, los cuales
+            definen las condiciones de uso del sitio, los métodos de pago, las políticas de despacho,
+            devoluciones y atención al cliente. Es importante revisarlos antes de realizar una compra
+            para garantizar una experiencia segura y satisfactoria.
           </p>
         </section>
 
         <section className="legal-section">
-          <h3 className="legal-title">Consultas Médicas</h3>
+          <h3 className="legal-title">Compras y Despachos</h3>
           <p className="legal-description">
-            Nuestra plataforma te conecta con médicos y cuidadoras expertas que ofrecen consultas
-            online y visitas domiciliarias. Estas consultas no reemplazan la atención presencial
-            en casos críticos, pero facilitan orientación médica, emisión de recetas y seguimiento.
-            Es fundamental proporcionar información completa y precisa para recibir el mejor cuidado.
+            Nuestro objetivo es ofrecerte un proceso de compra ágil y confiable. Los productos mostrados
+            en el sitio están sujetos a disponibilidad. Los despachos se realizan de acuerdo con los plazos
+            y condiciones indicadas en cada pedido. Ante cualquier inconveniente, puedes comunicarte con
+            nuestro servicio de atención al cliente para gestionar cambios o devoluciones.
           </p>
         </section>
 
         <section className="legal-section">
-          <h3 className="legal-title">Cómo Funciona</h3>
+          <h3 className="legal-title">Funcionamiento del Sitio</h3>
           <p className="legal-description">
-            <strong>CuidApp</strong> simplifica el acceso a la salud en Santiago. Puedes elegir un
-            especialista o cuidadora, agendar tu visita o consulta virtual, y recibir recomendaciones
-            personalizadas según tus necesidades. Recuerda que en situaciones de emergencia debes
-            acudir directamente a un centro de salud local.
+            <strong>Super Asia</strong> busca brindarte una experiencia de compra práctica y accesible.
+            Puedes navegar por nuestras categorías, agregar productos al carrito, aplicar cupones y realizar
+            pagos seguros. En caso de mantenimiento o actualización del sitio, algunos servicios podrían
+            verse temporalmente interrumpidos.
           </p>
         </section>
       </main>
 
       <footer className="legal-footer">
-        <p>© 2025 <span className="brand-highlight">CuidApp</span>. Todos los derechos reservados.</p>
+        <p>© 2025 <span className="brand-highlight">Super Asia</span>. Todos los derechos reservados.</p>
       </footer>
     </div>
   );

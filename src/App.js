@@ -19,7 +19,7 @@ import Footer from "./Components/Footer";
 function App() {
   return (
     <div className="App">
-      <Router basename="/CuidApp">
+      <Router basename="/superasia-react">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
