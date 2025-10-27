@@ -1,5 +1,5 @@
 import React from "react";
-import InformationCard from "./InformationCard";
+import InformationCard from "./InformationCard.jsx";
 import "../Styles/Info.css";
 
 function Info() {

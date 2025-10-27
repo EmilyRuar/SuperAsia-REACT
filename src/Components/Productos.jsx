@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/Productos.css";
-import { productos } from "../Scripts/dataProductos";
+import { productos } from "../Scripts/dataProductos.jsx";
 
 
 function Productos() {

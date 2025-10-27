@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/Ofertas.css";
-import OfertaImg from "../Assets/nosotros.png"; // Pon tu imagen aquí
+import OfertaImg from "../Assets/nosotros.png"; 
 
 function Ofertas() {
   return (

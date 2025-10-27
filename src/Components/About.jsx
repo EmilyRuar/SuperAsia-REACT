@@ -1,6 +1,6 @@
 import React from "react";
 import VideoFile from "../Assets/video_superasia.mp4";
-import SolutionStep from "./SolutionStep";
+import SolutionStep from "./SolutionStep.jsx";
 import "../Styles/About.css";
 
 function About() {
