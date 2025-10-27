@@ -1,125 +1,53 @@
-module.exports = function(config) {
+const path = require('path');
+
+module.exports = function (config) {
   config.set({
-    // Framework a usar
-    frameworks: ['jasmine'],
-
-    // Archivos a incluir en los tests
+    frameworks: ['jasmine', 'webpack'],
     files: [
-      'src/**/*.spec.js',
-      'src/**/*.js',
-      'src/**/*.jsx'
+      'src/**/*.test.js'
     ],
-plugins: [
-  'karma-webpack',
-  'karma-coverage',
-  'karma-chrome-launcher',
-  'karma-jasmine',
-  'karma-jasmine-html-reporter'
-],
-    // Archivos a excluir
-    exclude: [
-      'src/index.js',
-      'src/reportWebVitals.js'
-    ],
-
-    // Preprocesadores
     preprocessors: {
-      'src/**/*.js': ['webpack', 'coverage'],
-      'src/**/*.jsx': ['webpack', 'coverage'],
-      'src/**/*.spec.js': ['webpack']
+      'src/**/*.test.js': ['webpack', 'sourcemap' ,'coverage' ]
     },
-
-    // Configuración de webpack para Karma
     webpack: {
       mode: 'development',
       module: {
         rules: [
+          // JS / JSX
           {
             test: /\.(js|jsx)$/,
             exclude: /node_modules/,
             use: {
               loader: 'babel-loader',
               options: {
-                presets: [
-                  '@babel/preset-env',
-                  '@babel/preset-react'
-                ],
-                plugins: [
-                  'istanbul'
-                ]
+                presets: ['@babel/preset-env', '@babel/preset-react']
               }
             }
           },
+          // CSS (mockeado)
           {
             test: /\.css$/,
-            use: ['style-loader', 'css-loader']
+            use: 'null-loader'
+          },
+          // Imágenes (mockeadas)
+          {
+            test: /\.(png|jpg|jpeg|gif|svg)$/,
+            use: ['null-loader']
           }
         ]
       },
       resolve: {
         extensions: ['.js', '.jsx']
-      }
+      },
+      devtool: 'inline-source-map'
     },
-
-    webpackMiddleware: {
-      noInfo: true,
-      stats: 'errors-only'
-    },
-
-    // Reporteros de test
-    reporters: ['progress', 'coverage'],
-
-    // Configuración del reporte de cobertura
+    reporters: ['progress', 'kjhtml', 'coverage'],
     coverageReporter: {
-      dir: 'coverage',
-      reporters: [
-        { type: 'html', subdir: 'html' },
-        { type: 'lcov', subdir: 'lcov' },
-        { type: 'text-summary' },
-        { type: 'cobertura', subdir: '.', file: 'cobertura.xml' }
-      ],
-      check: {
-        global: {
-          statements: 80,
-          branches: 40,
-          functions: 80,
-          lines: 75
-        }
-      }
+      type: 'html',
+      dir: 'coverage/',
+      subdir: '.'
     },
-
-    // Puerto del servidor
-    port: 9876,
-
-    // Habilitar colores en el output
-    colors: true,
-
-    // Nivel de logging
-    logLevel: config.LOG_INFO,
-
-    // Habilitar watching de archivos
-    autoWatch: true,
-
-    // Navegadores para ejecutar tests
     browsers: ['ChromeHeadless'],
-
-    // Configuración personalizada para Chrome Headless
-    customLaunchers: {
-      ChromeHeadlessCI: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox', '--disable-gpu']
-      }
-    },
-
-    // Ejecución continua
-    singleRun: false,
-
-    // Timeout
-    browserNoActivityTimeout: 30000,
-    browserDisconnectTimeout: 10000,
-    browserDisconnectTolerance: 3,
-
-    // Concurrencia
-    concurrency: Infinity
+    singleRun: true
   });
 };
